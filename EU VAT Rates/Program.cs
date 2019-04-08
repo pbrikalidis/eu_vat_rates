@@ -74,6 +74,7 @@ namespace EU_VAT_Rates
             var vatList = new RootObject();
             using (var client = new HttpClient())
             {
+                // Set Headers
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -88,6 +89,7 @@ namespace EU_VAT_Rates
                 }
                 catch (Exception ex)
                 {
+                    // Output error to the console
                     Console.WriteLine(ex.Message);
                 }
                       
